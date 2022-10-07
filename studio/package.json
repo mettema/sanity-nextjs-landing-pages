@@ -7,13 +7,15 @@
   "scripts": {
     "build": "sanity build",
     "dev": "sanity start",
-    "test": "sanity check"
+    "test": "sanity check",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@sanity/base": "^1.149",
     "@sanity/cli": "^1.149",
     "@sanity/components": "^1.149",
-    "@sanity/core": "^1.149",
+    "@sanity/core": "^2.18.0",
     "@sanity/dashboard": "^1.149",
     "@sanity/default-layout": "^1.149",
     "@sanity/default-login": "^1.149",
@@ -23,7 +25,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sanity-plugin-dashboard-widget-document-list": "^0.0.10",
-    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
+    "sanity-plugin-dashboard-widget-netlify": "^1.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -36,5 +39,6 @@
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
     "prettier-eslint-cli": "^4.7.1"
-  }
+  },
+  "snyk": true
 }
